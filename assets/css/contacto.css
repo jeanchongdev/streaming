@@ -1,0 +1,194 @@
+/* Estilos para la página de contacto */
+.contact-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  @media (min-width: 768px) {
+    .contact-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .contact-info h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .contact-info p {
+    margin-bottom: 30px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .contact-details {
+    margin-bottom: 30px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .contact-item i {
+    font-size: 20px;
+    color: #e50914;
+    margin-right: 15px;
+    margin-top: 3px;
+  }
+  
+  .contact-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .contact-item p {
+    margin: 0;
+    color: #666;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #e50914;
+    color: white;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .social-link:hover {
+    transform: translateY(-3px);
+    background-color: #c50000;
+  }
+  
+  .contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .contact-form h2:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #e50914;
+    margin: 10px auto 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #e50914;
+    outline: none;
+  }
+  
+  .btn-submit {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-submit:hover {
+    background-color: #c50000;
+  }
+  
+  /* Estilos para la página de resultados de búsqueda */
+  .no-results {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .no-results-icon {
+    font-size: 60px;
+    color: #e50914;
+    margin-bottom: 20px;
+  }
+  
+  .no-results h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .no-results p {
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .no-results ul {
+    list-style-type: disc;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto 30px;
+    padding-left: 20px;
+  }
+  
+  .no-results ul li {
+    margin-bottom: 8px;
+    color: #666;
+  }
+  
+  .no-results .btn {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .search-results h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  

@@ -1,0 +1,40 @@
+<IfModule mod_rewrite.c>
+    # Activar el motor de reescritura de URL
+    RewriteEngine On
+
+    # Establecer la base para las reescrituras, en este caso la carpeta '/streaming/'
+    RewriteBase /streaming/
+
+    # Si el archivo o directorio solicitado existe, se usa directamente (evitar que la reescritura se aplique a archivos reales)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Regla para las URLs de las películas: 'pelicula/nombre-pelicula'
+    # Si la URL coincide con 'pelicula/nombre-pelicula', redirige a 'views/pelicula.php' con el parámetro 'slug'
+    RewriteRule ^pelicula/([a-zA-Z0-9-]+)$ views/pelicula.php?slug=$1 [L,QSA]
+
+    # Regla para las URLs de categorías: 'categoria/nombre-categoria'
+    # Si la URL coincide con 'categoria/nombre-categoria', redirige a 'views/categoria.php' con el parámetro 'slug'
+    RewriteRule ^categoria/([a-zA-Z0-9-]+)$ views/categoria.php?slug=$1 [L,QSA]
+
+    # Regla para la página de películas (URL 'peliculas')
+    # Si la URL es 'peliculas', redirige a 'views/peliculas.php'
+    RewriteRule ^peliculas$ views/peliculas.php [L,QSA]
+
+    # Regla para la página de búsqueda (URL 'buscar')
+    # Si la URL es 'buscar', redirige a 'views/buscar.php'
+    RewriteRule ^buscar$ views/buscar.php [L,QSA]
+
+    # Regla para la búsqueda con parámetro: 'buscar/valor-busqueda'
+    # Si la URL es 'buscar/valor-busqueda', redirige a 'views/buscar.php' con el parámetro 'q'
+    RewriteRule ^buscar/(.*)$ views/buscar.php?q=$1 [L,QSA]
+
+    # Evitar que se muestre el índice del directorio (si alguien accede a una carpeta vacía, no se mostrará el listado de archivos)
+    Options -Indexes
+</IfModule>
+
+# Asegurarse de que los archivos .php sean procesados por PHP
+# Esto asegura que cualquier archivo con extensión .php sea manejado correctamente por el intérprete de PHP
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>

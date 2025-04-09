@@ -1,0 +1,9 @@
+.env
+vendor
+composer.json
+composer.lock
+assets/images
+#hacer validaciones
+core/verificar-slugs.php
+core/phpinfo.php
+tests

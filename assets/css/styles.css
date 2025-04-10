@@ -584,8 +584,15 @@ footer {
 }
 
 .footer-logo h2 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #00f0ff; /* Puedes cambiar a cualquier color neon que quieras y usar a tu gusto */
+  text-shadow: 
+    0 0 5px #00f0ff,
+    0 0 10px #00f0ff,
+    0 0 20px #00f0ff,
+    0 0 40px #00ffff;
+  animation: neonPulse 2s infinite alternate;
 }
 
 .footer-links h3,

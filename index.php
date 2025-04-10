@@ -11,7 +11,7 @@ $sql = "SELECT p.*, c.nombre as categoria_nombre, c.slug as categoria_slug
         FROM peliculas p 
         JOIN categorias c ON p.categoria_id = c.id 
         ORDER BY p.id DESC 
-        LIMIT 6";  // Consulta para obtener las últimas 6 películas
+        LIMIT 10";  // Consulta para obtener las últimas 10 películas
 $result = $conn->query($sql);
 $featured_movies = []; // Arreglo para almacenar las películas destacadas
 

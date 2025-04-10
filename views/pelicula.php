@@ -106,7 +106,13 @@ if ($result && $result->num_rows > 0) {
                     <div class="movie-card">
                         <div class="movie-poster">
                             <!-- Mostrar la imagen de la película relacionada -->
-                            <img src="<?php echo $base_url; ?>assets/images/<?php echo $related['imagen']; ?>" alt="<?php echo $related['titulo']; ?>">
+                            <?php
+                                $imagen_url = $related['imagen'];
+                                if (!preg_match('/^https?:\/\//', $imagen_url)) {
+                                    $imagen_url = $base_url . 'assets/images/' . $imagen_url;
+                                }
+                            ?>
+                            <img src="<?php echo $imagen_url; ?>" alt="<?php echo $related['titulo']; ?>">
                             <!-- Botón para ver la película relacionada -->
                             <div class="movie-overlay">
                                 <a href="<?php echo url_amigable('pelicula', $related['slug'], true); ?>" class="btn-play">

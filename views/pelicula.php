@@ -105,7 +105,7 @@ if ($result && $result->num_rows > 0) {
                     <?php foreach($related_movies as $related): ?> <!-- Iterar sobre las películas relacionadas -->
                     <div class="movie-card">
                         <div class="movie-poster">
-                            <!-- Mostrar la imagen de la película relacionada -->
+                            <!-- Mostrar la imagen de la película relacionada mediante una URL -->
                             <?php
                                 $imagen_url = $related['imagen'];
                                 if (!preg_match('/^https?:\/\//', $imagen_url)) {

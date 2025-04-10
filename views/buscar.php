@@ -2,8 +2,6 @@
 // Incluir archivos necesarios usando rutas absolutas
 include_once __DIR__ . '/../config/database.php';  // Conexión a la base de datos
 include_once __DIR__ . '/../config/config.php';    // Configuración global (como $base_url)
-include_once __DIR__ . '/../includes/header.php';  // Encabezado del sitio
-include_once '../includes/stiker.php'; // Incluir el sticker
 
 // Verificar si se ha enviado el parámetro de búsqueda "q"
 if (!isset($_GET['q']) || empty($_GET['q'])) {
@@ -36,6 +34,21 @@ if ($result && $result->num_rows > 0) {
         $movies[] = $row;
     }
 }
+
+// Si no hay resultados, redirigir a la página de error 404
+if (count($movies) == 0) {
+    // Guardar el término de búsqueda en una variable de sesión para mostrarla en la página de error
+    session_start();
+    $_SESSION['search_query'] = $search_query;
+    
+    // Redirigir a la página de error 404
+    header("Location: " . $base_url . "views/error404.php");
+    exit();
+}
+
+// Si llegamos aquí, hay resultados, así que incluimos el encabezado
+include_once __DIR__ . '/../includes/header.php';
+include_once __DIR__ . '/../includes/stiker.php'; // Incluir el sticker
 ?>
 
 <main>
@@ -45,48 +58,40 @@ if ($result && $result->num_rows > 0) {
             <!-- Mostrar el término de búsqueda -->
             <h1>Resultados de búsqueda para: "<?php echo htmlspecialchars($search_query); ?>"</h1>
 
-            <?php if (count($movies) > 0): ?>
-                <!-- Mostrar películas si hay resultados -->
-                <div class="movie-grid">
-                    <?php foreach ($movies as $movie): ?>
-                    <div class="movie-card">
-                        <!-- Imagen de la película url con overlay de botón de reproducción -->
-                        <div class="movie-poster">
-                        <img src="<?php echo $movie['imagen']; ?>" alt="<?php echo $movie['titulo']; ?>">
-                            <div class="movie-overlay">
-                                <a href="<?php echo url_amigable('pelicula', $movie['slug'], true); ?>" class="btn-play">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Información básica de la película -->
-                        <div class="movie-info">
-                            <h3>
-                                <a href="<?php echo url_amigable('pelicula', $movie['slug'], true); ?>">
-                                    <?php echo $movie['titulo']; ?>
-                                </a>
-                            </h3>
-                            <!-- Mostrar categoría con enlace -->
-                            <span class="category">
-                                <a href="<?php echo url_amigable('categoria', $movie['categoria_slug'], true); ?>">
-                                    <?php echo $movie['categoria_nombre']; ?>
-                                </a>
-                            </span>
-                            <!-- Año y duración -->
-                            <span class="year"><?php echo $movie['anio']; ?></span>
-                            <span class="duration"><?php echo $movie['duracion']; ?></span>
+            <!-- Mostrar películas (sabemos que hay resultados porque sino habría redirigido) -->
+            <div class="movie-grid">
+                <?php foreach ($movies as $movie): ?>
+                <div class="movie-card">
+                    <!-- Imagen de la película url con overlay de botón de reproducción -->
+                    <div class="movie-poster">
+                    <img src="<?php echo $movie['imagen']; ?>" alt="<?php echo $movie['titulo']; ?>">
+                        <div class="movie-overlay">
+                            <a href="<?php echo url_amigable('pelicula', $movie['slug'], true); ?>" class="btn-play">
+                                <i class="fas fa-play"></i>
+                            </a>
                         </div>
                     </div>
-                    <?php endforeach; ?>
+
+                    <!-- Información básica de la película -->
+                    <div class="movie-info">
+                        <h3>
+                            <a href="<?php echo url_amigable('pelicula', $movie['slug'], true); ?>">
+                                <?php echo $movie['titulo']; ?>
+                            </a>
+                        </h3>
+                        <!-- Mostrar categoría con enlace -->
+                        <span class="category">
+                            <a href="<?php echo url_amigable('categoria', $movie['categoria_slug'], true); ?>">
+                                <?php echo $movie['categoria_nombre']; ?>
+                            </a>
+                        </span>
+                        <!-- Año y duración -->
+                        <span class="year"><?php echo $movie['anio']; ?></span>
+                        <span class="duration"><?php echo $movie['duracion']; ?></span>
+                    </div>
                 </div>
-            <?php else: ?>
-                <!-- Si no hay resultados -->
-                <div class="no-results">
-                    <p>No se encontraron películas que coincidan con tu búsqueda.</p>
-                    <a href="<?php echo $base_url; ?>index.php" class="btn">Volver al inicio</a>
-                </div>
-            <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
         </div>
     </section>
 </main>

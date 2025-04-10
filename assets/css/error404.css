@@ -1,0 +1,225 @@
+/* Estilos para la página de error 404 */
+.error-404 {
+    padding: 60px 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+  }
+  
+  .error-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .error-404 h1 {
+    font-size: 120px;
+    font-weight: 900;
+    color: #e50914;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .error-404 h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .error-404 p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .error-gif {
+    max-width: 300px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .error-gif img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .error-suggestions {
+    text-align: left;
+    margin: 30px auto;
+    max-width: 500px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .error-suggestions h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  .error-suggestions h3:before {
+    content: "💡";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .error-suggestions ul {
+    list-style-type: none;
+    padding-left: 25px;
+  }
+  
+  .error-suggestions li {
+    margin-bottom: 12px;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .error-suggestions li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #e50914;
+    font-size: 20px;
+  }
+  
+  .error-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .error-actions .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    min-width: 180px;
+  }
+  
+  .error-actions .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #e50914;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .btn-secondary {
+    background-color: #333;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #444;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .error-404 h1 {
+      font-size: 100px;
+    }
+  
+    .error-404 h2 {
+      font-size: 28px;
+    }
+  
+    .error-content {
+      padding: 30px;
+      margin: 0 20px;
+    }
+  
+    .error-gif {
+      max-width: 250px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .error-404 h1 {
+      font-size: 80px;
+    }
+  
+    .error-404 h2 {
+      font-size: 24px;
+    }
+  
+    .error-404 p {
+      font-size: 16px;
+    }
+  
+    .error-content {
+      padding: 20px;
+    }
+  
+    .error-gif {
+      max-width: 200px;
+    }
+  
+    .error-suggestions {
+      padding: 15px;
+    }
+  
+    .error-actions .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .error-404 h1 {
+      font-size: 60px;
+    }
+  
+    .error-404 h2 {
+      font-size: 20px;
+    }
+  
+    .error-content {
+      padding: 15px;
+    }
+  
+    .error-gif {
+      max-width: 180px;
+    }
+  }
+  

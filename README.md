@@ -54,7 +54,7 @@ ALTER TABLE peliculas MODIFY COLUMN video_url VARCHAR(1000);
 
 ## 👀 Ojo
 
-4. **Agrega tus propias imagenes URL en la columna imagen asi como video URL para visializarlo.**
+4. **Agrega tus propias imagenes URL en la columna `imagen` asi como video URL para visializarlo del video lo puedes sacar de YouTube siempre y cuando sea `iframe` le das en compartir `incorporar < >` y pegas en la columna `video_url` lo que sale nada mas y listo a disfrutar.**
 
 5. **Crea un archivo** `.env` en la raíz del proyecto con la siguiente estructura:
 

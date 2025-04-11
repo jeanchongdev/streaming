@@ -36,7 +36,7 @@ composer require vlucas/phpdotenv
 
 ## ⚠️ Nota importante
 
-> ⚠️ **IMPORTANTE:** Si el proyecto no funciona correctamente, realiza los siguientes pasos para asegurarte de que la base de datos esté configurada correctamente, en la carpeta config/setup.php biene creado las tablas correctamentes y se implementaran automaticamene al momento de crear la base de datos tan solo debe de modificar los cambios a continuación:
+> ⚠️ **IMPORTANTE:** Si el proyecto no funciona correctamente, realiza los siguientes pasos para asegurarte de que la base de datos esté configurada correctamente, en la carpeta `config/setup.php` biene creado las tablas correctamentes y se implementaran automaticamene al momento de crear la base de datos tan solo debe de modificar los cambios a continuación:
 
 1. **Crea la base de datos** `streaming_db` en MySQL si aún no existe.
 

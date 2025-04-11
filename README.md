@@ -52,7 +52,11 @@ ALTER TABLE peliculas ADD slug VARCHAR(255);
 ALTER TABLE peliculas MODIFY COLUMN video_url VARCHAR(1000);
 ```
 
-4. **Crea un archivo** `.env` en la raíz del proyecto con la siguiente estructura:
+## 👀 Ojo
+
+4. **Agrega tus propias imagenes URL en la columna imagen asi como video URL para visializarlo.**
+
+5. **Crea un archivo** `.env` en la raíz del proyecto con la siguiente estructura:
 
 ```bash
 DB_HOST=localhost

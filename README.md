@@ -15,7 +15,7 @@ git clone https://github.com/jeanchongdev/streaming.git && cd cinestream && code
 
 --------------------------------------------------------------------------------------------------
 
-## 💬 Instalación de dependencias
+## 💬 Instalación de dependenciasss
 
 ```bash
 composer require vlucas/phpdotenv

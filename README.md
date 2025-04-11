@@ -1,13 +1,29 @@
-🎬 Proyecto de Streaming de Películas
-Este proyecto es una plataforma de streaming de películas donde los usuarios pueden navegar fácilmente por categorías, explorar títulos disponibles y 
-reproducir contenido desde una interfaz amigable e intuitiva.
+# 🎥✨ CineStream – Tu plataforma de cine en casa
 
-Entre sus características principales se encuentran:
+<p align="center">
+  <img src="https://i.postimg.cc/BZNwCGTt/Captura-de-pantalla-2025-04-10-212424.png" alt="CineStream Preview" width="500" height="500" />
+</p>
 
-🎞️ Visualización de películas organizadas por géneros
+--------------------------------------------------------------------------------------------------
 
-🔍 Búsqueda rápida por nombre o categoría
+## 🚀 Instalación rápida
 
-📱 Diseño responsive para disfrutar desde cualquier dispositivo
+Copia y pega este comando en tu terminal de VS Code para comenzar:
 
-🧑‍💻 Experiencia fluida de usuario y navegación interactiva
+```bash
+git clone https://github.com/jeanchongdev/streaming.git && cd cinestream && code .
+
+--------------------------------------------------------------------------------------------------
+
+## 💬 Instalación de dependencias
+
+```bash
+composer require vlucas/phpdotenv
+
+--------------------------------------------------------------------------------------------------
+
+**Tecnologías utilizadas en el proyecto:**  
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" height="40px" width="40px"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" height="40px" width="40px"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" height="40px" width="40px"/>

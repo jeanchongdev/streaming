@@ -74,7 +74,9 @@ BASE_URL=/streaming/
 --------------------------------------------------------------------------------------------------
 
 ## 👨‍💻 Autor
-**Desarrollado 🖤 por @jeanchongdev**
+**Desarrollado 🖤 por @jeanchongdev** <br>
+🔗 **[Visita mi portafolio web](https://jeanchongdev.github.io/)** <br>
+💼 **[Visit my web portfolio](https://jeanchongdev.vercel.app/)**
 
 --------------------------------------------------------------------------------------------------
 
